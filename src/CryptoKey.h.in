@@ -1,0 +1,5 @@
+#pragma once
+static const unsigned char g_key[32] = {
+    @KEY_BYTES@
+};
+
