@@ -1,69 +1,63 @@
-### P2P Messenger
+![P2P Messenger](https://github.com/GlonSlon/P2P-Messenger/blob/main/appimage/p2p-messenger.png)
+# P2P Messenger
 
-**P2P Messenger** - децентрализованный мессенджер для дистрибутивов Linux, работающий по принципу Peer-to-Peer. Поиск собеседников и передача данных происходят напрямую через глобальную сеть распределенных хеш-таблиц (DHT). 
+P2P Messenger is a decentralized peer-to-peer messenger for Linux distributions. Peer discovery and data transfer are performed directly through a global distributed hash table (DHT) network.
 
----
+## Features
 
-### Особенности
+- **Full decentralization:** No servers, databases, or single point of failure.
+- **Private rooms:** A communication channel is created individually for each pair of users based on their usernames.
+- **Data encryption:** All payload, including text and files, is protected with AES-256. The encryption key is generated randomly at build time. Each build is unique and cannot connect to clients from earlier or later builds.
+- **Self-cleaning:** Messages are stored in the DHT for approximately 1.5 hours and then automatically deleted.
+- **File transfer:** File sending is supported with pre-compression via Zlib.
 
-* **Полная децентрализация:** Нет серверов, баз данных или единой точки отказа.
-* **Приватные комнаты:** Канал связи создается индивидуально для каждой пары пользователей на основе их имен.
-* **Шифрование данных:** Вся полезная нагрузка (текст и файлы) защищена алгоритмом AES-256. Ключ шифрования генерируется случайным образом в момент сборки проекта - каждая сборка приложения индивидуальна и не позволяет подключиться другим клиентам с приложением поздней или ранней сборки.
-* **Самоочистка:** Сообщения хранятся в сети DHT в районе 1.5 часа, после чего автоматически удаляются.
-* **Передача файлов:** Поддерживается отправка файлов с предварительным сжатием (Zlib).
+## Technology Stack
 
----
+- **Language:** C++17
+- **GUI:** Qt6 (Widgets)
+- **Networking:** OpenDHT (Jami library)
+- **Cryptography:** OpenSSL (AES-256-CBC)
+- **Compression:** Zlib
+- **Build system:** CMake
 
-### Технологический стек
-* **Язык:** C++17
-* **GUI:** Qt6 (Widgets)
-* **Сеть:** OpenDHT (библиотека Jami)
-* **Криптография:** OpenSSL (AES-256-CBC)
-* **Сжатие:** Zlib
-* **Сборка:** CMake
+## Dependency Installation
 
----
+### Debian / Ubuntu / Kali Linux
 
-### Установка зависимостей
-
-**Для Debian / Ubuntu / Kali Linux:**
 ```bash
 chmod +x DEBIAN_INSTALLING_DEPENDENCIES.sh
 ./DEBIAN_INSTALLING_DEPENDENCIES.sh
 ```
 
-**Для Arch Linux / Manjaro:**
+### Arch Linux / Manjaro
+
 ```bash
 chmod +x ARCH_INSTALLING_DEPENDENCIES.sh
 ./ARCH_INSTALLING_DEPENDENCIES.sh
 ```
 
----
-
-### Сборка и упаковка
+## Build and Packaging
 
 ```bash
 cd P2P-Messenger
 chmod +x START.sh
 ./START.sh
 ```
----
 
-### Использование
+## Usage
 
-1. Запустите файл `p2p-messenger-x86_64.AppImage`.
-2. Введите желаемый **username**.
-3. В поле поиска введите **username** собеседника и нажмите кнопку поиска.
-4. Выберите найденного пользователя в списке слева.
-5. Для второго собеседника идентичные действия - так как инициация должна быть взаимной.
-6. Чат готов.
+1. Run `p2p-messenger-x86_64.AppImage`.
+2. Enter the desired **username**.
+3. Enter the peer's **username** in the search field and click the search button.
+4. Select the found user in the list on the left.
+5. The second peer must perform the same actions, since initiation must be mutual.
+6. The chat is ready.
 
-###
+**Note:** Both users must use clients built from the same source code to be able to read each other's messages.
 
-*Примечание: Оба пользователя должны использовать клиенты, собранные из одного исходного кода, чтобы иметь возможность читать сообщения друг друга.*
+## DHTNet Installation Issues
 
-### ЕСЛИ ЕСТЬ ПРОБЛЕМЫ С УСТНОВКОЙ DHTNET
-** Сборка из исходников: **
+If DHTNet installation fails, build it from source:
 
 ```bash
 DHTNET_INSTALLER.sh
