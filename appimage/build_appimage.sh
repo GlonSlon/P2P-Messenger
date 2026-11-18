@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-APP_NAME="P2P-Messenger"
+APP_NAME="p2p-messenger"
 BUILD_DIR="../build"
 APPDIR="AppDir"
 
@@ -14,7 +14,7 @@ cp "$BUILD_DIR/$APP_NAME" "$APPDIR/usr/bin/"
 
 cat > "$APPDIR/usr/share/applications/$APP_NAME.desktop" <<EOF
 [Desktop Entry]
-Name=P2P-Messenger
+Name=p2p-messenger
 Exec=$APP_NAME
 Icon=p2p-messenger.png
 Type=Application

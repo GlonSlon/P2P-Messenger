@@ -18,6 +18,6 @@ echo "TAG: BUILD APPIMAGE - OK"
 
 
 echo "TAG: COPY APPIMAGE"
-cp P2P-Messenger*.AppImage $HOME/ || cp *.AppImage $HOME/
+cp p2p-messenger*.AppImage $HOME/ || cp *.AppImage $HOME/
 echo "TAG: COPY APPIMAGE - OK"
 

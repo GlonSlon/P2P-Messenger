@@ -7,24 +7,34 @@
 
 LoginDialog::LoginDialog(QWidget* parent) : QDialog(parent) {
     setWindowTitle("P2P Messenger — Вход");
-    setFixedSize(420, 180);
+    setFixedSize(440, 220);
     setStyleSheet(QString("background-color: %1;").arg(Theme::Background.name()));
 
     auto* layout = new QVBoxLayout(this);
-    layout->setContentsMargins(24, 24, 24, 24);
+    layout->setContentsMargins(32, 32, 32, 32);
+    layout->setSpacing(16);
 
     auto* title = new QLabel("Придумайте username");
-    title->setStyleSheet(QString("color: %1; font-size: 15pt; font-weight: bold;").arg(Theme::Text.name()));
+    title->setAlignment(Qt::AlignCenter);
+    title->setStyleSheet(QString(
+        "color: %1; font-size: 16pt; font-weight: bold; background: transparent;")
+        .arg(Theme::Text.name()));
 
     usernameEdit_ = new QLineEdit;
     usernameEdit_->setPlaceholderText("username");
     usernameEdit_->setStyleSheet(QString(
-        "QLineEdit { background-color: %1; border: 1px solid %2; border-radius: 6px; padding: 8px; color: %3; }")
-        .arg(Theme::SurfaceDark.name(), Theme::Border.name(), Theme::Text.name()));
+        "QLineEdit { background-color: %1; border: 1px solid %2; "
+        "border-radius: 8px; padding: 12px 14px; color: %3; font-size: 11pt; }"
+        "QLineEdit:focus { border: 1px solid %4; }")
+        .arg(Theme::SurfaceDark.name(), Theme::Border.name(),
+             Theme::Text.name(), Theme::Accent.name()));
 
     auto* loginBtn = new QPushButton("Войти");
     loginBtn->setStyleSheet(QString(
-        "QPushButton { background-color: %1; color: white; border: none; border-radius: 6px; padding: 10px; font-weight: bold; }")
+        "QPushButton { background-color: %1; color: white; border: none; "
+        "border-radius: 8px; padding: 12px; font-weight: bold; font-size: 11pt; }"
+        "QPushButton:hover { background-color: #3f6ad8; }"
+        "QPushButton:pressed { background-color: #2f4fa8; }")
         .arg(Theme::Accent.name()));
 
     layout->addWidget(title);

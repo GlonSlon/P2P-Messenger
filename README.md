@@ -1,4 +1,3 @@
-![P2P Messenger](https://github.com/GlonSlon/P2P-Messenger/blob/bcbd29816c55afeceb9c4153f354fe9ce4349ef9/appimage/p2p-messenger.png)
 ### P2P Messenger
 
 **P2P Messenger** - децентрализованный мессенджер для дистрибутивов Linux, работающий по принципу Peer-to-Peer. Поиск собеседников и передача данных происходят напрямую через глобальную сеть распределенных хеш-таблиц (DHT). 

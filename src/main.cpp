@@ -5,6 +5,7 @@
 
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
+    QFont::insertSubstitution("Sans Serif", "Noto Color Emoji");
     app.setApplicationName("P2P Messenger");
 
     QFile styleFile(":/style.qss");
