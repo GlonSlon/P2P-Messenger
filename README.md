@@ -1,4 +1,9 @@
+<div align="center">
+  
 ![P2P Messenger](https://github.com/GlonSlon/P2P-Messenger/blob/main/appimage/p2p-messenger.png)
+
+</div>
+
 # P2P Messenger
 
 P2P Messenger is a decentralized peer-to-peer messenger for Linux distributions. Peer discovery and data transfer are performed directly through a global distributed hash table (DHT) network.
