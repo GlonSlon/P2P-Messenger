@@ -58,6 +58,13 @@ chmod +x START.sh
 5. The second peer must perform the same actions, since initiation must be mutual.
 6. The chat is ready.
 
+<div align="center">
+  
+![P2P Messenger](https://github.com/GlonSlon/P2P-Messenger/blob/main/resources/screenshot/MSG1.png)
+![P2P Messenger](https://github.com/GlonSlon/P2P-Messenger/blob/main/resources/screenshot/MSG2.png)
+
+</div>
+
 **Note:** Both users must use clients built from the same source code to be able to read each other's messages.
 
 ## DHTNet Installation Issues
